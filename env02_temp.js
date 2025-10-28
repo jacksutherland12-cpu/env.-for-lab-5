@@ -1,13 +1,6 @@
-
 function checkTemp() {
-
   let userTemp = prompt("What's the water temperature (°F)?");
   userTemp = Number(userTemp);
-
-  if (userTemp <= 0 || isNaN(userTemp)) {
-    $("#output").html("🤔 Please enter a real number for °F.");
-    return;
-  }
 
   if (userTemp < 60) {
     $("#output").html("❄️ Brrr! The reef feels awfully cold today. Perry’s hiding in the kelp.");
@@ -17,7 +10,6 @@ function checkTemp() {
     $("#output").html("🔥 HOT, HOT, HOT. Whoa! The reef feels tropical today!");
   }
 }
-
 
 $("#temp-button").click(function () {
   checkTemp();
